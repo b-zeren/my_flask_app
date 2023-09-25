@@ -1,0 +1,19 @@
+{% extends "master.html" %}
+
+{% block title %}Forgot my password{% endblock %}
+
+{% block body %} 
+
+      <b> {{mgs}} </b>
+      
+
+      <form method = "post">
+           
+        <p>Enter User Name:</p>
+        <p><input type = "text" name = "usern" class="form-control" /></p>
+        
+        <p><input type = "submit" value = "Submit" class="form-control"/></p>
+  
+  </form>   
+
+{% endblock %}

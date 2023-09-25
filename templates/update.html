@@ -1,0 +1,32 @@
+{% extends "master.html" %}
+
+{% block title %}Signup{% endblock %}
+
+{% block body %} 
+     <form action = "" method = "post">
+           
+      <p>Enter User Name:</p>
+      <p><input type = "text" name = "usern" maxlength="20" value={{data.username}}></p>
+
+      <p>Enter First Name:</p>
+      <p><input type = "text" name = "firstn" maxlength="20" value={{data.firstname}}></p>
+
+      <p>Enter Middle Name:</p>
+      <p><input type = "text" name = "middlen" maxlength="20" value={{data.middlename}}></p>
+
+      <p>Enter Last Name:</p>
+      <p><input type = "text" name = "lastn" maxlength="20" value={{data.lastname}}></p>
+
+      <p>Enter Birth Date:</p>
+      <p><input type = "date" name = "bdate" min="1900-01-01" max="2023-12-31" value={{data.dob}}></p>
+
+      <p>Enter Email:</p>
+      <p><input type = "email" name = "email" maxlength="40" value={{data.email}}></p>
+
+      <p>Enter Password:</p>
+      <p><input type = "password" name = "passw" /></p>
+      
+      <p><input type = "submit" value = "Sign up" /></p>
+      </form>     
+
+{% endblock %}

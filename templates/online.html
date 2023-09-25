@@ -1,0 +1,22 @@
+{% extends "master.html" %}
+
+{% block title %}Online users{% endblock %}
+
+{% block body %} 
+  <h1>Here is the list of online users</h2>
+    <div class="container-fluid">
+        <div class="card-group">
+        {%for user in users%}
+            <div class="card">
+                <div class="card-body">
+                <h4 class="card-title">ID:{{user.id}}</h4>
+                <p class="card-text"><b>{{user.username}} </b>: {{user.lastactivity}} from {{user.ip_address}}</p>
+                </div>
+            </div>
+                <!--ID:{{user.id}}/{{user.username}}: {{user.lastactivity}} from {{user.ip_address}}-->
+            
+        {%endfor%}
+        </div>
+    </div>
+
+{% endblock %}

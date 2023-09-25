@@ -1,0 +1,35 @@
+{% extends "master.html" %}
+
+{% block title %}Signup{% endblock %}
+
+{% block body %} 
+
+      <h3> {{error}} </h3>
+      <form action = "/user/create" method = "post" class="form-control">
+           
+      <p>Enter User Name:</p>
+      <p><input type = "text" name = "usern" maxlength="20" class="form-control"/></p>
+
+      <p>Enter First Name:</p>
+      <p><input type = "text" name = "firstn" maxlength="20" class="form-control"/></p>
+
+      <p>Enter Middle Name:</p>
+      <p><input type = "text" name = "middlen" maxlength="20" class="form-control"/></p>
+
+      <p>Enter Last Name:</p>
+      <p><input type = "text" name = "lastn" maxlength="20" class="form-control"/></p>
+
+      <p>Enter Birth Date:</p>
+      <p><input type = "date" name = "bdate" min="1900-01-01" max="2023-12-31" class="form-control"/></p>
+
+      <p>Enter Email:</p>
+      <p><input type = "email" name = "email" maxlength="40" class="form-control"/></p>
+
+      <p>Enter Password:</p>
+      <p><input type = "password" name = "passw" class="form-control"/></p>
+      
+      <p><input type = "submit" value = "Sign up" class="form-control"/></p>
+      </form>     
+
+      
+{% endblock %}

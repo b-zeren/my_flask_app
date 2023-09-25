@@ -1,0 +1,23 @@
+{% extends "master.html" %}
+
+{% block title %}Login{% endblock %}
+
+{% block body %} 
+
+      <b>{{error}}</b>
+      <form method = "post">
+           
+            <p>Enter User Name:</p>
+            <p><input type = "text" name = "usern" class="form-control" /></p>
+      
+            <p>Enter Password:</p>
+            <p><input type = "password" name = "passw" class="form-control"/></p>
+            
+            <p><input type = "submit" value = "Submit" class="form-control"/></p>
+      
+      </form>   
+
+      <a href="/forgotpassword" class="link-dark">Forgot my password</a>
+
+        
+{% endblock %}

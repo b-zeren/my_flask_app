@@ -1,0 +1,28 @@
+{% extends "master.html" %}
+
+{% block title %}User List{% endblock %}
+
+{% block body %}
+
+    <h1>Here is the list of registered users</h2>
+
+        {%if mgs!= None%}
+            <b> {{mgs}} <b>
+        {%endif%}
+        
+        <div class="card-deck">
+            {%for user in users%}
+            <div class="card">
+                <div class="card-body">
+                <h4 class="card-title"> ID:{{user.id}} </h4>
+                <p class="card-text"> <b>{{user.username}}</b> : {{user.lastname}}, {{user.firstname}} {{user.middlename}}'s birthday is {{user.birthdate}} </p>
+                <a href= "/user/delete/{{user.id}}" class="card-link">Delete</a>
+                <a href= "/user/update/{{user.id}}" class="card-link">Update</a>
+                </div>
+            </div>
+            
+            {%endfor%}
+        </div>
+    <a href= "/loginsuccess" class="link-dark">Go back to my page</a>
+
+{% endblock %}
