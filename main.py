@@ -26,7 +26,7 @@ app = Flask(__name__)
 
 # database config
 # postgresql://[YOUR_USERNAME]:[YOUR_PASSWORD]@[YOUR_HOST_NAME]:[YOUR_PORT]/[DATABASE_NAME]
-app.config['SQLALCHEMY_DATABASE_URI'] = "postgresql://buket:123456@localhost:5432/buket" ### "postgresql://USER_NAME:PASSWORD@localhost:5432/DB_NAME"
+app.config['SQLALCHEMY_DATABASE_URI'] = "postgresql://USER_NAME:PASSWORD@localhost:5432/DB_NAME"
 app.secret_key = 'super secret key'
 db = SQLAlchemy(app)
 
@@ -39,11 +39,11 @@ logging.basicConfig(filename = 'records.log')
 
 
 # mail server configuration, check flask-mail module docs for more info
-sender_mail = 'buketzeren354@gmail.com'
+sender_mail = 'user@gmail.com'
 app.config['MAIL_SERVER']='smtp.gmail.com'
 app.config['MAIL_PORT'] = 465
 app.config['MAIL_USERNAME'] = sender_mail
-app.config['MAIL_PASSWORD'] = 'miwasmvltcamdstl' 
+app.config['MAIL_PASSWORD'] = 'password' 
 app.config['MAIL_USE_TLS'] = False
 app.config['MAIL_USE_SSL'] = True
 
